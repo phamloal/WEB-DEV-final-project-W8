@@ -1,31 +1,138 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechTrove | Premium Tech Gadgets</title>
-    <meta name="description" content="Shop the latest tech gadgets at TechTrove. Find premium quality electronics, accessories, and more." />
-    <meta name="author" content="TechTrove" />
+    <meta name="description" content="Shop the latest tech gadgets at TechTrove. Find premium quality electronics, accessories, and more.">
+    <meta name="author" content="TechTrove">
 
-    <meta property="og:title" content="TechTrove | Premium Tech Gadgets" />
-    <meta property="og:description" content="Shop the latest tech gadgets at TechTrove. Find premium quality electronics, accessories, and more." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:title" content="TechTrove | Premium Tech Gadgets">
+    <meta property="og:description" content="Shop the latest tech gadgets at TechTrove. Find premium quality electronics, accessories, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lovable_dev">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">TechTrove</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-icon">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Premium Tech Gadgets for Every Need</h1>
+                    <p>Discover the latest innovations in technology with our curated collection of high-quality devices.</p>
+                    <a href="products.html" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="product-grid" id="featured-products">
+                    <!-- Products will be loaded here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Browse Categories</h2>
+                <div class="category-grid">
+                    <a href="products.html?category=Audio" class="category-card">
+                        <div class="category-icon">🎧</div>
+                        <h3>Audio</h3>
+                    </a>
+                    <a href="products.html?category=Computers" class="category-card">
+                        <div class="category-icon">💻</div>
+                        <h3>Computers</h3>
+                    </a>
+                    <a href="products.html?category=Wearables" class="category-card">
+                        <div class="category-icon">⌚</div>
+                        <h3>Wearables</h3>
+                    </a>
+                    <a href="products.html?category=Smart+Home" class="category-card">
+                        <div class="category-icon">🏠</div>
+                        <h3>Smart Home</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new products and special promotions.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-accent">Subscribe</button>
+                </form>
+                <p id="newsletter-message" class="form-message"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechTrove</h3>
+                    <p>Your destination for premium tech gadgets and accessories.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@techtrove.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Tech St, Silicon Valley, CA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechTrove. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
